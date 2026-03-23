@@ -19,7 +19,7 @@ Code repository for the paper:
 ## Installation
 First you need to clone the repo:
 ```
-git clone --recursive https://github.com/geopavlakos/hamer.git
+git clone --recursive https://github.com/multiplylabs/hamer_fork.git
 cd hamer
 ```
 
