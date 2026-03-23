@@ -24,14 +24,4 @@ setup(
         'xtcocotools',
         'pandas',
     ],
-    extras_require={
-        'all': [
-            'hydra-core',
-            'hydra-submitit-launcher',
-            'hydra-colorlog',
-            'pyrootutils',
-            'rich',
-            'webdataset',
-        ],
-    },
 )
