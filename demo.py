@@ -13,7 +13,7 @@ from hamer.utils.renderer import Renderer, cam_crop_to_full
 
 LIGHT_BLUE=(0.65098039,  0.74117647,  0.85882353)
 
-from vitpose_model import ViTPoseModel
+from hamer.vitpose_model import ViTPoseModel
 
 import json
 from typing import Dict, Optional
@@ -34,7 +34,7 @@ def main():
     args = parser.parse_args()
 
     # Download and load checkpoints
-    download_models(CACHE_DIR_HAMER)
+    # download_models(CACHE_DIR_HAMER)
     model, model_cfg = load_hamer(args.checkpoint)
 
     # Setup HaMeR model

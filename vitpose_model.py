@@ -8,17 +8,15 @@ import torch.nn as nn
 
 from mmpose.apis import inference_top_down_pose_model, init_pose_model, process_mmdet_results, vis_pose_result
 
-os.environ["PYOPENGL_PLATFORM"] = "egl"
+from hamer.configs import CACHE_DIR_HAMER
 
-# project root directory
-ROOT_DIR = "./"
-VIT_DIR = os.path.join(ROOT_DIR, "third-party/ViTPose")
+os.environ["PYOPENGL_PLATFORM"] = "egl"
 
 class ViTPoseModel(object):
     MODEL_DICT = {
         'ViTPose+-G (multi-task train, COCO)': {
-            'config': f'{VIT_DIR}/configs/wholebody/2d_kpt_sview_rgb_img/topdown_heatmap/coco-wholebody/ViTPose_huge_wholebody_256x192.py',
-            'model': f'{ROOT_DIR}/_DATA/vitpose_ckpts/vitpose+_huge/wholebody.pth',
+            'config': f'{CACHE_DIR_HAMER}/vitpose_configs/ViTPose_huge_wholebody_256x192.py',
+            'model': f'{CACHE_DIR_HAMER}/vitpose_ckpts/vitpose+_huge/wholebody.pth',
         },
     }
 
