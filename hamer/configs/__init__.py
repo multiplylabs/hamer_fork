@@ -2,7 +2,8 @@ import os
 from typing import Dict
 from yacs.config import CfgNode as CN
 
-CACHE_DIR_HAMER = "./_DATA"
+project_root = os.environ.get("PIXI_PROJECT_ROOT")
+CACHE_DIR_HAMER = project_root + "/assets/ml/perception/checkpoints/hamer/_DATA"
 
 def to_lower(x: Dict) -> Dict:
     """
